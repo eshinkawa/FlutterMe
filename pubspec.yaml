@@ -1,0 +1,35 @@
+name: sparkweb
+description: Eduardo Shinkawa Resume Page.
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^0.1.2
+  url_launcher: ^5.4.10
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+   - assets/images/me.jpg
+   - assets/images/github.png
+   - assets/images/twitter.png
+   - assets/images/instagram.png
+   - assets/images/linkedin.png
+
+  fonts:
+    - family: SourceSansPro
+      fonts:
+        - asset: assets/fonts/SourceSansPro-Regular.ttf
+        - asset: assets/fonts/SourceSansPro-Light.ttf
+        - asset: assets/fonts/SourceSansPro-ExtraLight.ttf
+  

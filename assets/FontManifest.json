@@ -1,0 +1,28 @@
+[
+  {
+    "family": "SourceSansPro",
+    "fonts": [
+      {
+        "asset": "fonts/SourceSansPro-Regular.ttf"
+      },
+
+      {
+        "asset": "fonts/SourceSansPro-Light.ttf",
+        "weight": 400
+      },
+
+      {
+        "asset": "fonts/SourceSansPro-ExtraLight.ttf",
+        "weight": 200
+      }
+    ]
+  },
+  {
+    "family": "MaterialIcons",
+    "fonts": [
+      {
+        "asset": "fonts/MaterialIcons-Regular.ttf"
+      }
+    ]
+  }
+]
