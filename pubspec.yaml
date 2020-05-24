@@ -11,6 +11,7 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^0.1.2
   url_launcher: ^5.4.10
+  responsive_builder: ^0.2.0+2
 
 dev_dependencies:
   flutter_test:
@@ -20,11 +21,11 @@ flutter:
   uses-material-design: true
 
   assets:
-   - assets/images/me.jpg
-   - assets/images/github.png
-   - assets/images/twitter.png
-   - assets/images/instagram.png
-   - assets/images/linkedin.png
+    - assets/images/me.jpg
+    - assets/images/github.png
+    - assets/images/twitter.png
+    - assets/images/instagram.png
+    - assets/images/linkedin.png
 
   fonts:
     - family: SourceSansPro
@@ -32,4 +33,3 @@ flutter:
         - asset: assets/fonts/SourceSansPro-Regular.ttf
         - asset: assets/fonts/SourceSansPro-Light.ttf
         - asset: assets/fonts/SourceSansPro-ExtraLight.ttf
-  

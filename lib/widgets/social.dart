@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SocialMedia extends StatelessWidget {
-  const SocialMedia({Key key}) : super(key: key);
+  const SocialMedia({Key key, this.titleSize, this.imageSize})
+      : super(key: key);
+
+  final double titleSize;
+  final double imageSize;
 
   _launchURL() async {
     const url = 'https://google.com.br';
@@ -22,11 +26,10 @@ class SocialMedia extends StatelessWidget {
         children: <Widget>[
           Text(
             "Where to find me",
-            style: TextStyle(
-                color: Colors.white,
-                fontSize: 48,
-                fontFamily: "SourceSansPro",
-                fontWeight: FontWeight.bold),
+            style: Theme.of(context)
+                .textTheme
+                .headline
+                .copyWith(fontSize: titleSize),
           ),
           SizedBox(height: 24),
           Row(
@@ -35,30 +38,23 @@ class SocialMedia extends StatelessWidget {
             children: <Widget>[
               GestureDetector(
                 child: Image(
-                  image: AssetImage("assets/images/github.png"),
-                  width: 64,
-                  height: 64,
-                ),
+                    image: AssetImage("assets/images/github.png"),
+                    width: imageSize),
                 onTap: _launchURL,
               ),
               SizedBox(width: 20),
               Image(
                 image: AssetImage("assets/images/instagram.png"),
-                width: 64,
-                height: 64,
+                width: imageSize,
               ),
               SizedBox(width: 20),
               Image(
-                image: AssetImage("assets/images/twitter.png"),
-                width: 64,
-                height: 64,
-              ),
+                  image: AssetImage("assets/images/twitter.png"),
+                  width: imageSize),
               SizedBox(width: 20),
               Image(
-                image: AssetImage("assets/images/linkedin.png"),
-                width: 64,
-                height: 64,
-              )
+                  image: AssetImage("assets/images/linkedin.png"),
+                  width: imageSize)
             ],
           )
         ],
