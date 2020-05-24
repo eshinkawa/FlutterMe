@@ -34,7 +34,7 @@ class HomeMobile extends StatelessWidget {
                               style: Theme.of(context)
                                   .textTheme
                                   .headline
-                                  .copyWith(fontSize: 36))
+                                  .copyWith(fontSize: 32))
                         ],
                       ),
                       SizedBox(height: 6),
@@ -42,9 +42,9 @@ class HomeMobile extends StatelessWidget {
                           style: Theme.of(context)
                               .textTheme
                               .display1
-                              .copyWith(fontSize: 24)),
+                              .copyWith(fontSize: 22)),
                       SizedBox(height: 36),
-                      SocialMedia(titleSize: 24, imageSize: 36,)
+                      SocialMedia(titleSize: 24, imageSize: 36)
                     ],
                   ),
                 )),

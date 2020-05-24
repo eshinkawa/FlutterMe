@@ -3,9 +3,11 @@ import 'package:sparkweb/utils/constants.dart';
 import 'package:sparkweb/widgets/social.dart';
 
 class Home extends StatelessWidget {
-  Home({Key key, this.padding }) : super(key: key);
+  Home({Key key, this.padding, this.greetingSize, this.descSize }) : super(key: key);
 
   final double padding;
+  final double greetingSize;
+  final double descSize;
 
   @override
   Widget build(BuildContext context) {
@@ -31,12 +33,12 @@ class Home extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
                           Text(GREETING,
-                              style: Theme.of(context).textTheme.headline)
+                              style: Theme.of(context).textTheme.headline.copyWith(fontSize: greetingSize))
                         ],
                       ),
                       SizedBox(height: 18),
                       Text(DESCRIPTION,
-                          style: Theme.of(context).textTheme.display1)
+                          style: Theme.of(context).textTheme.display1.copyWith(fontSize: descSize))
                     ],
                   ),
                 )),

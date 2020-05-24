@@ -21,7 +21,7 @@ class App extends StatelessWidget {
           }
 
           if (sizingInformation.deviceScreenType == DeviceScreenType.tablet) {
-            return Home(padding: 24);
+            return Home(padding: 24, greetingSize: 36, descSize: 22);
           }
 
           if (sizingInformation.deviceScreenType == DeviceScreenType.mobile) {
