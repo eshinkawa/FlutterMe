@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:sparkweb/utils/constants.dart';
+import 'package:sparkweb/widgets/profile.dart';
 import 'package:sparkweb/widgets/social.dart';
 
 class Home extends StatelessWidget {
-  Home({Key key, this.padding, this.greetingSize, this.descSize }) : super(key: key);
+  Home({Key key, this.padding, this.greetingSize, this.descSize})
+      : super(key: key);
 
   final double padding;
   final double greetingSize;
@@ -18,30 +19,10 @@ class Home extends StatelessWidget {
           children: <Widget>[
             Expanded(
                 flex: 1,
-                child: Container(
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage("assets/images/me.jpg"),
-                          fit: BoxFit.cover)),
-                  padding: EdgeInsets.all(padding),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: <Widget>[
-                          Text(GREETING,
-                              style: Theme.of(context).textTheme.headline.copyWith(fontSize: greetingSize))
-                        ],
-                      ),
-                      SizedBox(height: 18),
-                      Text(DESCRIPTION,
-                          style: Theme.of(context).textTheme.display1.copyWith(fontSize: descSize))
-                    ],
-                  ),
-                )),
+                child: Profile(
+                    padding: padding,
+                    descSize: descSize,
+                    greetingSize: greetingSize)),
             Expanded(
               flex: 1,
               child: Container(

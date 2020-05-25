@@ -15,13 +15,12 @@ class App extends StatelessWidget {
       theme: appTheme(),
       home: Scaffold(body: ResponsiveBuilder(
         builder: (context, sizingInformation) {
-          // Check the sizing information here and return your UI
           if (sizingInformation.deviceScreenType == DeviceScreenType.desktop) {
             return Home(padding: 96);
           }
 
           if (sizingInformation.deviceScreenType == DeviceScreenType.tablet) {
-            return Home(padding: 24, greetingSize: 36, descSize: 22);
+            return Home(padding: 36, greetingSize: 36, descSize: 22);
           }
 
           if (sizingInformation.deviceScreenType == DeviceScreenType.mobile) {
